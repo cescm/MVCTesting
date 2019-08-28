@@ -1,0 +1,30 @@
+﻿@model List<MvcMusicStore.Models.Pelicula>
+
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>País</th>
+            <th>Duración</th>
+            <th>Fecha Lanzamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+        <tr>
+            <td>@p.titulo</td>
+            <td>@p.pais</td>
+            <td>@p.duracion</td>
+            <td>@p.fecha</td>
+        </tr>
+        }
+    </tbody>
+</table>

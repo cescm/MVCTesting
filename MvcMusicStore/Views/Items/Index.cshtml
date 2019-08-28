@@ -1,0 +1,8 @@
+﻿@model List<MvcMusicStore.Models.Items>
+<h1>@ViewBag.Message</h1>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>id: @item.Id, nombre: @item.Nombre</li>
+    }
+</ul>
