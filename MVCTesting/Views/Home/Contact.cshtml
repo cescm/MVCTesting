@@ -1,4 +1,15 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h5>@Html.Display("Propiedad")</h5>
+
+@Html.Display("Propiedad")
+
+@Html.Editor("Propiedad")
+
+@{ var listado = new List<SelectListItem>(){
+       new SelectListItem(){Text="SI", Value="1"},
+       new SelectListItem(){Text="NO", Value="2"}
+   };
+}
+
+@Html.DropDownList("miDrodDown", listado)
